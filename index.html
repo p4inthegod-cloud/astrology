@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Личный разбор жизненной ситуации с Эльвирой. Поймите, что происходит и какой шаг сделать дальше. Первый звонок — 99 ₽."
+      content="Персональный разбор жизненной ситуации с Эльвирой с использованием профессиональной астрологии. Первый личный звонок — 99 ₽."
     />
-    <meta name="theme-color" content="#160f1c" />
-    <title>Эльвира — личный разбор жизненной ситуации</title>
+    <meta name="theme-color" content="#110d17" />
+    <title>Эльвира — персональный разбор жизненной ситуации</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,223 +18,386 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="ambient ambient--one" aria-hidden="true"></div>
-    <div class="ambient ambient--two" aria-hidden="true"></div>
-
-    <div class="site-shell">
-      <header class="header">
-        <a class="brand" href="#top" aria-label="Эльвира — на главную">
-          <span class="brand__monogram" aria-hidden="true">Э</span>
-          <span class="brand__copy">
-            <strong>ЭЛЬВИРА</strong>
-            <small>профессиональная астрология</small>
-          </span>
-        </a>
-
-        <div class="header__proof">
-          <span class="header__proof-dot" aria-hidden="true"></span>
-          Первый звонок<br />проводит Эльвира лично
-        </div>
-
-        <button class="header__cta" type="button" data-open-modal>
-          <span>Первый разбор</span>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <nav class="topbar__nav" aria-label="Навигация по странице">
+          <a href="#expert">Об эксперте</a>
+          <a href="#help">С чем помогаю</a>
+          <a href="#process">Как проходит</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#faq">Вопросы</a>
+        </nav>
+        <button class="topbar__cta" type="button" data-open-modal>
+          Записаться на разбор
           <strong>99 ₽</strong>
-          <span class="header__cta-arrow" aria-hidden="true">↗</span>
         </button>
-      </header>
+      </div>
+    </header>
 
-      <main id="top">
-        <section class="hero" aria-labelledby="hero-title">
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero__grid">
           <div class="hero__content">
-            <div class="offer-badge reveal reveal--1">
-              <span class="offer-badge__pulse" aria-hidden="true"></span>
-              Профессиональный астролог
-              <span class="offer-badge__divider" aria-hidden="true"></span>
-              Личный разбор за 99 ₽
-            </div>
-
+            <div class="section-label reveal reveal--1">Персональный разбор жизненной ситуации</div>
             <h1 class="hero__title reveal reveal--2" id="hero-title">
-              Не понимаете,<br />
-              что делать дальше?
-              <span class="gradient-text hero__title-bottom">Разберём вашу ситуацию лично</span>
+              Не понимаете,<br />что делать дальше?
+              <span>Разберём вашу ситуацию лично</span>
             </h1>
-
             <p class="hero__lead reveal reveal--3">
               Когда мысли ходят по кругу, трудно увидеть решение самостоятельно.
-              На личном звонке Эльвира поможет понять, <strong>что происходит,
-              на что вы можете повлиять и какой шаг сделать следующим.</strong>
+              Эльвира поможет понять, <strong>что происходит, на что вы можете
+              повлиять и какой шаг сделать следующим.</strong>
             </p>
 
-            <div class="clarity-note reveal reveal--4">
-              <span class="clarity-note__icon" aria-hidden="true">✓</span>
+            <div class="professional-note reveal reveal--4">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 9.3 17 19 7" /></svg>
               <p>
-                <strong>Это не общий гороскоп и не мистическое предсказание.</strong>
-                Вы получите персональный разбор одного важного жизненного вопроса.
+                <strong>Не общий гороскоп и не мистическое предсказание.</strong>
+                Персональный разбор одного важного вопроса с использованием профессиональной астрологии.
               </p>
             </div>
 
             <div class="hero__actions reveal reveal--5">
               <button class="primary-cta" type="button" data-open-modal>
-                <span class="primary-cta__copy">
-                  <strong>Записаться на личный звонок</strong>
-                </span>
-                <span class="primary-cta__price">за 99 ₽</span>
-                <span class="primary-cta__arrow" aria-hidden="true">→</span>
+                <span>Записаться на личный звонок</span>
+                <strong>за 99 ₽</strong>
+                <i aria-hidden="true">→</i>
               </button>
-
-              <button class="process-link" type="button" data-open-process>
-                <span class="process-link__play" aria-hidden="true">▶</span>
-                <span><strong>Как проходит звонок</strong><small>Посмотреть 3 шага</small></span>
-              </button>
+              <a class="secondary-link" href="#process">Как проходит консультация ↓</a>
             </div>
 
-            <div class="risk-reversal reveal reveal--5">
-              <span aria-hidden="true">✓</span> 99 ₽ — разовая оплата, не подписка
-              <span aria-hidden="true">✓</span> После оплаты выберете удобное время
+            <div class="payment-note reveal reveal--5">
+              <span>✓ Разовая оплата, не подписка</span>
+              <span>✓ После оплаты выберете удобное время</span>
             </div>
 
-            <div class="benefit-list reveal reveal--6" aria-label="Что вы получите на звонке">
-              <div><span>01</span><p><strong>Разберём</strong> ваш главный вопрос</p></div>
-              <div><span>02</span><p><strong>Отделим</strong> факты от тревожных мыслей</p></div>
+            <div class="hero-results reveal reveal--6" aria-label="Результаты звонка">
+              <div><span>01</span><p><strong>Разберём</strong> главный вопрос</p></div>
+              <div><span>02</span><p><strong>Увидим</strong> ключевые причины</p></div>
               <div><span>03</span><p><strong>Определим</strong> следующий шаг</p></div>
             </div>
           </div>
 
-          <div class="hero__visual reveal reveal--visual">
-            <div class="visual-glow" aria-hidden="true"></div>
-            <div class="expert-card">
-              <img
-                class="expert-card__photo"
-                src="/images/elvira-consultation.webp"
-                alt="Эльвира проводит личную консультацию"
-              />
-              <div class="expert-card__overlay" aria-hidden="true"></div>
-              <div class="expert-card__identity">
-                <span>Эльвира</span>
-                <small>Профессиональный астролог · многолетняя практика</small>
-              </div>
-              <div class="expert-card__topic">Отношения · семья · деньги · выбор</div>
-            </div>
+          <figure class="hero-photo reveal reveal--visual">
+            <img src="/images/elvira-consultation.webp" alt="Эльвира во время личной консультации" />
+            <figcaption>
+              <strong>Эльвира</strong>
+              <span>Профессиональный астролог · личные консультации</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
-            <div class="expert-proof">
-              <img src="/images/elvira-portrait.webp" alt="Портрет Эльвиры" />
-              <div>
-                <span><i></i> Личный формат</span>
-                <strong>С вами разговаривает Эльвира</strong>
-                <small>Не менеджер и не автоматический сервис</small>
-              </div>
+      <section class="trust-numbers" aria-labelledby="trust-numbers-title">
+        <div class="container">
+          <div class="trust-numbers__head">
+            <p class="section-kicker">Цифры доверия</p>
+            <h2 id="trust-numbers-title">Факты вместо громких обещаний</h2>
+          </div>
+          <div class="number-grid">
+            <article class="number-card number-card--pending">
+              <strong>20__</strong>
+              <span>год начала практики</span>
+              <small>Нужно подставить подтверждённый год</small>
+            </article>
+            <article class="number-card number-card--pending">
+              <strong>___+</strong>
+              <span>личных консультаций</span>
+              <small>Только фактическое количество</small>
+            </article>
+            <article class="number-card">
+              <strong>1 : 1</strong>
+              <span>личный формат звонка</span>
+              <small>Без групп и автоматических разборов</small>
+            </article>
+            <article class="number-card">
+              <strong>99 ₽</strong>
+              <span>безопасный первый шаг</span>
+              <small>Разовая оплата без подписки</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="help-section section" id="help" aria-labelledby="help-title">
+        <div class="container">
+          <div class="section-heading section-heading--wide">
+            <p class="section-kicker">С чем я могу помочь</p>
+            <h2 id="help-title">Когда внутри много вопросов, начнём с самого важного</h2>
+            <p>Для первого звонка достаточно выбрать одну ситуацию, которая сейчас занимает больше всего мыслей.</p>
+          </div>
+
+          <div class="help-grid">
+            <article class="help-card">
+              <span>01</span><h3>Отношения</h3>
+              <p>Не понимаете намерений партнёра, повторяете один сценарий или не знаете, стоит ли сохранять отношения.</p>
+            </article>
+            <article class="help-card">
+              <span>02</span><h3>Семья</h3>
+              <p>Напряжение с близкими, сложный разговор, перемены в семье или решение, которое затрагивает всех.</p>
+            </article>
+            <article class="help-card">
+              <span>03</span><h3>Деньги и работа</h3>
+              <p>Стоите перед сменой работы, новым проектом или хотите понять причины повторяющихся финансовых трудностей.</p>
+            </article>
+            <article class="help-card">
+              <span>04</span><h3>Предназначение</h3>
+              <p>Потеряли ощущение направления и хотите увидеть свои сильные стороны без шаблонных советов.</p>
+            </article>
+            <article class="help-card">
+              <span>05</span><h3>Сложный выбор</h3>
+              <p>Есть несколько вариантов, но страх ошибки мешает спокойно оценить последствия каждого решения.</p>
+            </article>
+            <article class="help-card">
+              <span>06</span><h3>Тревога за будущее</h3>
+              <p>Неопределённость отнимает силы, и вам нужна точка опоры, чтобы вернуться к последовательным действиям.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="expert-section section" id="expert" aria-labelledby="expert-title">
+        <div class="container expert-layout">
+          <div class="expert-gallery">
+            <img class="expert-gallery__main" src="/images/elvira-certificate.webp" alt="Эльвира получает сертификат о профессиональном обучении" />
+            <img class="expert-gallery__secondary" src="/images/elvira-portrait.webp" alt="Портрет Эльвиры" />
+          </div>
+
+          <div class="expert-copy">
+            <p class="section-kicker">Личность и профессиональный подход</p>
+            <h2 id="expert-title">Почему мне доверяют</h2>
+            <p class="expert-copy__lead">
+              Я использую астрологию как профессиональный инструмент анализа — чтобы не напугать будущим,
+              а помочь человеку спокойнее увидеть свою ситуацию, возможности и ограничения.
+            </p>
+
+            <div class="trust-reasons">
+              <article>
+                <span>01</span><div><h3>Серьёзная подготовка</h3><p>Профессиональное обучение и подтверждающие документы, которые можно показать на сайте.</p></div>
+              </article>
+              <article>
+                <span>02</span><div><h3>Опыт реальной практики</h3><p>Работа с запросами об отношениях, семье, деньгах, выборе и жизненных переменах.</p></div>
+              </article>
+              <article>
+                <span>03</span><div><h3>Без давления и запугивания</h3><p>Никаких «роковых дат», магических гарантий или зависимости от постоянных прогнозов.</p></div>
+              </article>
+              <article>
+                <span>04</span><div><h3>Конкретное направление</h3><p>После разговора у вас остаются понятные выводы и ближайший следующий шаг.</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="method-section section" aria-labelledby="method-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Метод работы</p>
+            <h2 id="method-title">Не угадывать будущее, а понять логику ситуации</h2>
+            <p>Профессиональная астрология помогает структурировать контекст, но решение всегда остаётся за вами.</p>
+          </div>
+
+          <div class="method-grid">
+            <article><span>Шаг 01</span><h3>Ваш контекст</h3><p>Начинаем не с карты, а с того, что происходит в вашей жизни и почему этот вопрос важен именно сейчас.</p></article>
+            <article><span>Шаг 02</span><h3>Персональный анализ</h3><p>Эльвира рассматривает ситуацию через профессиональную астрологию, без универсальных трактовок для всех.</p></article>
+            <article><span>Шаг 03</span><h3>Направление действий</h3><p>Выделяем ключевые факторы, возможные варианты и ближайший шаг, который находится в вашей зоне влияния.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-section section" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-heading section-heading--wide">
+            <p class="section-kicker">Как проходит консультация</p>
+            <h2 id="process-title">От заявки до личного разговора — без непонятных этапов</h2>
+          </div>
+
+          <ol class="process-timeline">
+            <li><span>01</span><div><h3>Оставляете контакт</h3><p>Указываете имя, удобный способ связи и выбираете тему главного вопроса.</p></div></li>
+            <li><span>02</span><div><h3>Оплачиваете 99 ₽</h3><p>Это разовый платёж за первый разбор. Автоматической подписки нет.</p></div></li>
+            <li><span>03</span><div><h3>Выбираете время</h3><p>Сразу после оплаты открывается понятная страница с доступными окнами для звонка.</p></div></li>
+            <li><span>04</span><div><h3>Говорите с Эльвирой</h3><p>Коротко описываете ситуацию, отвечаете на уточняющие вопросы и получаете первое направление.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="outcome-section section" aria-labelledby="outcome-title">
+        <div class="container outcome-layout">
+          <div class="section-heading">
+            <p class="section-kicker">Что получите после звонка</p>
+            <h2 id="outcome-title">Не набор сложных терминов, а понятный итог разговора</h2>
+          </div>
+          <div class="outcome-list">
+            <article><span>✓</span><div><h3>Формулировку главной проблемы</h3><p>Поймёте, какой вопрос действительно нужно решать, а что только усиливает тревогу.</p></div></article>
+            <article><span>✓</span><div><h3>Персональное объяснение</h3><p>Увидите ключевые факторы вашей ситуации без общих прогнозов для знака зодиака.</p></div></article>
+            <article><span>✓</span><div><h3>Возможные направления</h3><p>Разберёте, какие варианты сейчас выглядят разумно и на что важно обратить внимание.</p></div></article>
+            <article><span>✓</span><div><h3>Один следующий шаг</h3><p>Закончите звонок с конкретным действием, а не с ещё большим количеством вопросов.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="price-section section" aria-labelledby="price-title">
+        <div class="container price-card">
+          <div class="price-card__copy">
+            <p class="section-kicker">Почему первый разбор стоит 99 ₽</p>
+            <h2 id="price-title">Чтобы знакомство с методом было безопасным решением</h2>
+            <p>
+              99 ₽ — не «скидка на судьбу» и не полная глубокая консультация. Это доступный первый звонок,
+              на котором вы знакомитесь с Эльвирой, формулируете один главный вопрос и получаете первое направление.
+            </p>
+            <ul>
+              <li>без подписки и скрытых платежей;</li>
+              <li>без обязательства покупать продолжение;</li>
+              <li>вы заранее понимаете формат и результат.</li>
+            </ul>
+          </div>
+          <div class="price-card__offer">
+            <small>Первый личный разбор</small>
+            <strong>99 ₽</strong>
+            <span>разовая оплата</span>
+            <button type="button" data-open-modal>Выбрать тему и записаться →</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-section section" id="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="section-heading section-heading--wide">
+            <p class="section-kicker">Кейсы и отзывы</p>
+            <h2 id="reviews-title">Реальные истории вместо рекламных обещаний</h2>
+            <p>В этот блок нужно поставить настоящие скриншоты переписок и истории клиентов. Тексты ниже не выдумывают результат — они показывают структуру будущих материалов.</p>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card"><span>Отношения</span><h3>Запрос → разбор → изменение</h3><p>Добавить короткую подтверждённую историю клиента: с чем пришла, что увидела после разговора и какое решение приняла.</p></article>
+            <article class="case-card"><span>Сложный выбор</span><h3>До консультации → после</h3><p>Показать не «чудо», а конкретную ясность: какие варианты были и какой следующий шаг выбрала клиентка.</p></article>
+            <article class="case-card"><span>Деньги и работа</span><h3>Ситуация → ключевой вывод</h3><p>Добавить историю без обещаний дохода: что мешало принять решение и на что клиентка смогла опереться.</p></article>
+          </div>
+
+          <div class="review-grid" aria-label="Места для настоящих отзывов">
+            <article class="review-placeholder"><span>Telegram / WhatsApp</span><strong>Добавить скриншот реального отзыва</strong><small>Имя и фото — только с разрешения клиента</small></article>
+            <article class="review-placeholder"><span>Telegram / WhatsApp</span><strong>Добавить скриншот реального отзыва</strong><small>Сохранить живой язык, не переписывать отзыв</small></article>
+            <article class="review-placeholder"><span>Telegram / WhatsApp</span><strong>Добавить скриншот реального отзыва</strong><small>Закрыть телефон и личные данные</small></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section section" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div class="section-heading">
+            <p class="section-kicker">Частые сомнения</p>
+            <h2 id="faq-title">Ответы до того, как вы оставите заявку</h2>
+            <p>Если останется вопрос, его можно указать в форме — ответ придёт вместе с подтверждением записи.</p>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item">
+              <button type="button" aria-expanded="false"><span>Это будет обычный гороскоп?</span><i>+</i></button>
+              <div class="faq-item__answer"><p>Нет. Разбор строится вокруг вашей конкретной ситуации и одного сформулированного запроса. Общие описания знака зодиака не используются как готовый ответ.</p></div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false"><span>Эльвира скажет, что точно произойдёт?</span><i>+</i></button>
+              <div class="faq-item__answer"><p>Нет. Цель — не обещать неизбежное будущее, а показать факторы ситуации, возможные направления и то, на что вы можете повлиять.</p></div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false"><span>Можно ли решить всё за один звонок?</span><i>+</i></button>
+              <div class="faq-item__answer"><p>Первый звонок не обещает решить всю жизнь. Он помогает разобрать один главный вопрос, уменьшить неопределённость и определить ближайший шаг.</p></div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false"><span>Почему цена всего 99 ₽?</span><i>+</i></button>
+              <div class="faq-item__answer"><p>Это стоимость первого знакомства-разбора, а не полной длительной консультации. Вы сможете понять подход Эльвиры без большого финансового решения.</p></div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false"><span>Нужно ли что-то покупать после звонка?</span><i>+</i></button>
+              <div class="faq-item__answer"><p>Нет. Продолжение возможно только по вашему желанию. Автоматической подписки и обязательной доплаты нет.</p></div>
+            </article>
+            <article class="faq-item">
+              <button type="button" aria-expanded="false"><span>Что произойдёт сразу после оплаты?</span><i>+</i></button>
+              <div class="faq-item__answer"><p>Вы попадёте на страницу выбора времени, получите подтверждение и короткую инструкцию по подготовке к разговору.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-section section" id="booking" aria-labelledby="booking-title">
+        <div class="container booking-card">
+          <div class="booking-copy">
+            <p class="section-kicker">Запись на первый разбор</p>
+            <h2 id="booking-title">Начните с одного вопроса, который беспокоит сильнее всего</h2>
+            <p>Оставьте контакт. На следующем шаге будет оплата 99 ₽, затем выбор удобного времени.</p>
+
+            <div class="after-payment">
+              <strong>Что будет после оплаты</strong>
+              <ol>
+                <li><span>1</span>Откроется выбор доступного времени</li>
+                <li><span>2</span>Придёт подтверждение записи</li>
+                <li><span>3</span>Вы получите короткую инструкцию</li>
+                <li><span>4</span>Эльвира позвонит в выбранное время</li>
+              </ol>
             </div>
           </div>
 
-          <div class="trust-strip reveal reveal--6" aria-label="Причины доверия">
-            <div class="trust-strip__label">
-              <span>Почему доверяют Эльвире</span>
-              <strong>Спокойный профессиональный подход</strong>
-            </div>
-            <div class="trust-fact">
-              <span class="trust-fact__icon" aria-hidden="true">✦</span>
-              <div><strong>Многолетняя практика</strong><small>Опыт работы с жизненными ситуациями</small></div>
-            </div>
-            <div class="trust-fact">
-              <span class="trust-fact__icon" aria-hidden="true">◈</span>
-              <div><strong>Без эзотерических обещаний</strong><small>Профессиональный метод вместо общих прогнозов</small></div>
-            </div>
-            <div class="trust-fact">
-              <span class="trust-fact__icon" aria-hidden="true">◎</span>
-              <div><strong>Личный и бережный разговор</strong><small>Конфиденциально и без осуждения</small></div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+          <form class="page-form" data-page-form>
+            <label><span>Ваше имя</span><input name="name" type="text" autocomplete="name" placeholder="Например, Анна" required /></label>
+            <label><span>Телефон или Telegram</span><input name="contact" type="text" autocomplete="tel" placeholder="+7 999 000-00-00" required /></label>
+            <label>
+              <span>Главный вопрос</span>
+              <select name="topic" required>
+                <option value="" selected disabled>Выберите тему</option>
+                <option>Отношения и семья</option><option>Деньги и работа</option><option>Предназначение</option>
+                <option>Сложный выбор</option><option>Тревога за будущее</option><option>Другая ситуация</option>
+              </select>
+            </label>
+            <button type="submit"><span>Перейти к оплате</span><strong>99 ₽ →</strong></button>
+            <small>Разовая оплата. Без подписки и автоматических списаний.</small>
+          </form>
 
-    <button class="manager-button" type="button" data-manager>
-      <span class="manager-button__avatar">
-        <img src="/images/elvira-portrait.webp" alt="" />
-        <i aria-hidden="true"></i>
-      </span>
-      <span><small>Остался вопрос?</small><strong>Помощь с записью</strong></span>
-      <span aria-hidden="true">→</span>
-    </button>
+          <div class="page-form-success" data-page-form-success hidden>
+            <span>✓</span><h3>Сценарий заявки готов</h3>
+            <p>В рабочей версии здесь откроется защищённая оплата 99 ₽, затем календарь выбора времени.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© 2026 Эльвира. Персональные консультации.</p>
+        <p>Материалы сайта не являются медицинской, юридической или финансовой рекомендацией.</p>
+      </div>
+    </footer>
 
     <button class="mobile-cta" type="button" data-open-modal>
-      <span><small>Личный разбор с Эльвирой</small><strong>Забронировать звонок</strong></span>
-      <b>99 ₽</b>
-      <i aria-hidden="true">→</i>
+      <span>Личный разбор</span><strong>99 ₽</strong><i aria-hidden="true">→</i>
     </button>
 
     <div class="modal" aria-hidden="true" data-modal>
       <div class="modal__backdrop" data-close-modal></div>
       <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>×</button>
-
-        <div class="modal__topline">
-          <img src="/images/elvira-portrait.webp" alt="Эльвира" />
-          <span><small>Личный звонок</small><strong>с Эльвирой</strong></span>
-          <b>99 ₽</b>
-        </div>
-        <h2 id="modal-title">Сделайте первый шаг к ясности</h2>
-        <p class="modal__lead">
-          Оставьте контакт — после оплаты вы выберете удобное время звонка.
-        </p>
-
+        <p class="section-kicker">Первый личный разбор · 99 ₽</p>
+        <h2 id="modal-title">Оставьте контакт и выберите главный вопрос</h2>
+        <p class="modal__lead">После формы откроется оплата, затем выбор удобного времени звонка.</p>
         <form class="consultation-form" data-consultation-form>
-          <label>
-            <span>Ваше имя</span>
-            <input name="name" type="text" autocomplete="name" placeholder="Например, Анна" required />
-          </label>
-          <label>
-            <span>Телефон или Telegram</span>
-            <input name="contact" type="text" autocomplete="tel" placeholder="+7 999 000-00-00" required />
-          </label>
+          <label><span>Ваше имя</span><input name="name" type="text" autocomplete="name" placeholder="Например, Анна" required /></label>
+          <label><span>Телефон или Telegram</span><input name="contact" type="text" autocomplete="tel" placeholder="+7 999 000-00-00" required /></label>
           <label>
             <span>С чем хотите разобраться?</span>
             <select name="topic" required>
               <option value="" selected disabled>Выберите главный вопрос</option>
-              <option>Отношения и семья</option>
-              <option>Деньги и работа</option>
-              <option>Предназначение</option>
-              <option>Сложный выбор</option>
-              <option>Тревога за будущее</option>
-              <option>Другая ситуация</option>
+              <option>Отношения и семья</option><option>Деньги и работа</option><option>Предназначение</option>
+              <option>Сложный выбор</option><option>Тревога за будущее</option><option>Другая ситуация</option>
             </select>
           </label>
-          <button class="form-submit" type="submit">
-            <span><small>Разовая оплата</small><strong>Продолжить и оплатить 99 ₽</strong></span>
-            <i aria-hidden="true">→</i>
-          </button>
-          <small class="form-note">Без подписки. Ваши данные используются только для связи по заявке.</small>
+          <button class="form-submit" type="submit"><span>Продолжить</span><strong>99 ₽ →</strong></button>
+          <small class="form-note">Разовая оплата. Без подписки и скрытых списаний.</small>
         </form>
-
         <div class="form-success" data-form-success hidden>
-          <span class="form-success__icon" aria-hidden="true">✓</span>
-          <h3>Сценарий заявки готов</h3>
-          <p>В рабочей версии здесь будет переход к оплате и выбор времени звонка.</p>
+          <span>✓</span><h3>Сценарий заявки готов</h3>
+          <p>В рабочей версии здесь откроется оплата, а после неё — календарь доступного времени.</p>
           <button type="button" data-close-modal>Понятно</button>
         </div>
       </div>
-    </div>
-
-    <div class="process-modal" aria-hidden="true" data-process-modal>
-      <div class="modal__backdrop" data-close-process></div>
-      <div class="process-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="process-title">
-        <button class="modal__close" type="button" aria-label="Закрыть" data-close-process>×</button>
-        <div class="process-modal__badge">Спокойно · лично · конфиденциально</div>
-        <h2 id="process-title">От заявки до ясного направления — три шага</h2>
-        <ol class="process-list">
-          <li><span>01</span><div><strong>Оставляете заявку</strong><p>Оплачиваете 99 ₽ и выбираете удобное время для разговора.</p></div></li>
-          <li><span>02</span><div><strong>Рассказываете о главном</strong><p>Эльвира задаёт вопросы и помогает точно сформулировать ваш запрос.</p></div></li>
-          <li><span>03</span><div><strong>Получаете направление</strong><p>Вы понимаете ключевые точки ситуации и ближайший следующий шаг.</p></div></li>
-        </ol>
-        <button class="form-submit" type="button" data-process-to-form>
-          <span><small>Первый личный звонок</small><strong>Записаться за 99 ₽</strong></span>
-          <i aria-hidden="true">→</i>
-        </button>
-      </div>
-    </div>
-
-    <div class="toast" role="status" aria-live="polite" data-toast>
-      На готовом сайте здесь откроется чат с помощником
     </div>
 
     <script type="module" src="script.js"></script>

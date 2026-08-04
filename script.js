@@ -1,92 +1,98 @@
-const consultationModal = document.querySelector("[data-modal]");
-const processModal = document.querySelector("[data-process-modal]");
-const consultationForm = document.querySelector("[data-consultation-form]");
-const formSuccess = document.querySelector("[data-form-success]");
-const toast = document.querySelector("[data-toast]");
+const modal = document.querySelector("[data-modal]");
+const modalForm = document.querySelector("[data-consultation-form]");
+const modalSuccess = document.querySelector("[data-form-success]");
+const pageForm = document.querySelector("[data-page-form]");
+const pageFormSuccess = document.querySelector("[data-page-form-success]");
 
 let lastFocusedElement = null;
-let toastTimer = null;
 
 function getFocusable(container) {
+  if (!container) return [];
+
   return [...container.querySelectorAll(
-    'button:not([disabled]), input:not([disabled]), select:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
-  )];
+    'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])'
+  )].filter((element) => !element.hidden);
 }
 
-function openDialog(dialog) {
+function resetModalForm() {
+  if (!modalForm || !modalSuccess) return;
+
+  modalForm.hidden = false;
+  modalSuccess.hidden = true;
+}
+
+function openModal() {
+  if (!modal) return;
+
   lastFocusedElement = document.activeElement;
-  dialog.classList.add("is-open");
-  dialog.setAttribute("aria-hidden", "false");
+  resetModalForm();
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 
-  const [firstFocusable] = getFocusable(dialog);
+  const [firstFocusable] = getFocusable(modal);
   window.setTimeout(() => firstFocusable?.focus(), 80);
 }
 
-function closeDialog(dialog) {
-  dialog.classList.remove("is-open");
-  dialog.setAttribute("aria-hidden", "true");
+function closeModal() {
+  if (!modal) return;
 
-  if (!document.querySelector(".modal.is-open, .process-modal.is-open")) {
-    document.body.style.overflow = "";
-  }
-
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
   lastFocusedElement?.focus();
 }
 
-function showToast() {
-  window.clearTimeout(toastTimer);
-  toast.classList.add("is-visible");
-  toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 2800);
-}
-
 document.querySelectorAll("[data-open-modal]").forEach((button) => {
-  button.addEventListener("click", () => {
-    consultationForm.hidden = false;
-    formSuccess.hidden = true;
-    openDialog(consultationModal);
-  });
+  button.addEventListener("click", openModal);
 });
 
 document.querySelectorAll("[data-close-modal]").forEach((button) => {
-  button.addEventListener("click", () => closeDialog(consultationModal));
+  button.addEventListener("click", closeModal);
 });
 
-document.querySelectorAll("[data-open-process]").forEach((button) => {
-  button.addEventListener("click", () => openDialog(processModal));
-});
-
-document.querySelectorAll("[data-close-process]").forEach((button) => {
-  button.addEventListener("click", () => closeDialog(processModal));
-});
-
-document.querySelector("[data-process-to-form]").addEventListener("click", () => {
-  closeDialog(processModal);
-  window.setTimeout(() => openDialog(consultationModal), 120);
-});
-
-document.querySelector("[data-manager]").addEventListener("click", showToast);
-
-consultationForm.addEventListener("submit", (event) => {
+modalForm?.addEventListener("submit", (event) => {
   event.preventDefault();
-  consultationForm.hidden = true;
-  formSuccess.hidden = false;
-  formSuccess.querySelector("button")?.focus();
+  modalForm.hidden = true;
+  modalSuccess.hidden = false;
+  modalSuccess.querySelector("button, a")?.focus();
+});
+
+pageForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  pageForm.hidden = true;
+  pageFormSuccess.hidden = false;
+  pageFormSuccess.setAttribute("tabindex", "-1");
+  pageFormSuccess.focus();
+});
+
+document.querySelectorAll(".faq-item > button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".faq-item");
+    const willOpen = !item.classList.contains("is-open");
+
+    document.querySelectorAll(".faq-item.is-open").forEach((openItem) => {
+      if (openItem === item) return;
+      openItem.classList.remove("is-open");
+      openItem.querySelector("button")?.setAttribute("aria-expanded", "false");
+    });
+
+    item.classList.toggle("is-open", willOpen);
+    button.setAttribute("aria-expanded", String(willOpen));
+  });
 });
 
 document.addEventListener("keydown", (event) => {
-  const openDialogElement = document.querySelector(".modal.is-open, .process-modal.is-open");
-
-  if (!openDialogElement) return;
+  if (!modal?.classList.contains("is-open")) return;
 
   if (event.key === "Escape") {
-    closeDialog(openDialogElement);
+    closeModal();
     return;
   }
 
   if (event.key !== "Tab") return;
 
-  const focusable = getFocusable(openDialogElement);
+  const focusable = getFocusable(modal);
   if (!focusable.length) return;
 
   const first = focusable[0];
