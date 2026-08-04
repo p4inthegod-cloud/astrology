@@ -5,141 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Персональный разбор жизненной ситуации с профессиональным астрологом. Первый личный звонок — 99 ₽."
+      content="Личный разбор жизненной ситуации с Эльвирой. Поймите, что происходит и какой шаг сделать дальше. Первый звонок — 99 ₽."
     />
-    <meta name="theme-color" content="#f3eee7" />
-    <title>Персональный разбор жизненной ситуации</title>
+    <meta name="theme-color" content="#160f1c" />
+    <title>Эльвира — личный разбор жизненной ситуации</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Onest:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page">
-      <header class="header" aria-label="Основная навигация">
-        <a class="brand" href="#top" aria-label="На главную">
-          <span class="brand__mark" aria-hidden="true">А</span>
-          <span class="brand__text">
-            <strong>Имя Фамилия</strong>
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+
+    <div class="site-shell">
+      <header class="header">
+        <a class="brand" href="#top" aria-label="Эльвира — на главную">
+          <span class="brand__monogram" aria-hidden="true">Э</span>
+          <span class="brand__copy">
+            <strong>ЭЛЬВИРА</strong>
             <small>профессиональная астрология</small>
           </span>
         </a>
 
-        <div class="header__right">
-          <span class="header__note">Личные консультации по всему миру</span>
-          <button class="header__button" type="button" data-open-modal>
-            Записаться
-            <span aria-hidden="true">↗</span>
-          </button>
+        <div class="header__proof">
+          <span class="header__proof-dot" aria-hidden="true"></span>
+          Личные консультации<br />по всему миру
         </div>
+
+        <button class="header__cta" type="button" data-open-modal>
+          <span>Первый разбор</span>
+          <strong>99 ₽</strong>
+          <span class="header__cta-arrow" aria-hidden="true">↗</span>
+        </button>
       </header>
 
       <main id="top">
         <section class="hero" aria-labelledby="hero-title">
-          <div class="hero__ornament hero__ornament--one" aria-hidden="true"></div>
-          <div class="hero__ornament hero__ornament--two" aria-hidden="true"></div>
-
           <div class="hero__content">
-            <div class="eyebrow reveal reveal--1">
-              <span class="eyebrow__dot" aria-hidden="true"></span>
-              Персональная консультация · не общий гороскоп
+            <div class="offer-badge reveal reveal--1">
+              <span class="offer-badge__pulse" aria-hidden="true"></span>
+              Личный звонок с Эльвирой
+              <span class="offer-badge__divider" aria-hidden="true"></span>
+              Первый разбор 99 ₽
             </div>
 
             <h1 class="hero__title reveal reveal--2" id="hero-title">
-              Когда сложно понять,<br />
-              как поступить — важно
-              <em>увидеть ситуацию целиком</em>
+              Поймите, что<br />
+              <span class="gradient-text">происходит в вашей жизни</span>
+              <span class="hero__title-bottom">и какой шаг сделать дальше</span>
             </h1>
 
             <p class="hero__lead reveal reveal--3">
-              На личном звонке я разберу вашу ситуацию с помощью профессиональной
-              астрологии и помогу понять, на что обратить внимание в отношениях,
-              деньгах, семье или важном жизненном выборе.
+              За один личный звонок разберём ваш главный вопрос в отношениях,
+              деньгах, семье или важном выборе — без общих гороскопов,
+              запугивания и громких обещаний.
             </p>
 
-            <div class="promise reveal reveal--4">
-              <span class="promise__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M5 12.5 9.3 17 19 7" />
-                </svg>
-              </span>
-              <p>
-                <strong>Без пугающих предсказаний.</strong>
-                Персональный разбор и понятное направление дальнейших действий.
-              </p>
+            <div class="result-card reveal reveal--4">
+              <div class="result-card__heading">
+                <span class="result-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12.5 9.3 17 19 7" /></svg>
+                </span>
+                <div>
+                  <small>После звонка у вас будет</small>
+                  <strong>не прогноз, а ясное направление</strong>
+                </div>
+              </div>
+
+              <div class="outcomes" aria-label="Результаты разбора">
+                <div class="outcome">
+                  <span>01</span>
+                  <p><strong>Увидите</strong> ключевую причину ситуации</p>
+                </div>
+                <div class="outcome">
+                  <span>02</span>
+                  <p><strong>Поймёте</strong> на что можете повлиять</p>
+                </div>
+                <div class="outcome">
+                  <span>03</span>
+                  <p><strong>Определите</strong> ближайший следующий шаг</p>
+                </div>
+              </div>
             </div>
 
             <div class="hero__actions reveal reveal--5">
-              <button class="primary-button" type="button" data-open-modal>
-                <span>Получить личный разбор</span>
-                <span class="primary-button__price">99 ₽</span>
-                <span class="primary-button__arrow" aria-hidden="true">→</span>
+              <button class="primary-cta" type="button" data-open-modal>
+                <span class="primary-cta__copy">
+                  <small>Начать с безопасного первого шага</small>
+                  <strong>Забронировать личный разбор</strong>
+                </span>
+                <span class="primary-cta__price">99 ₽</span>
+                <span class="primary-cta__arrow" aria-hidden="true">→</span>
               </button>
-              <button class="text-button" type="button" data-open-process>
-                Как проходит звонок
-                <span aria-hidden="true">↘</span>
+
+              <button class="process-link" type="button" data-open-process>
+                <span class="process-link__play" aria-hidden="true">▶</span>
+                <span><strong>Как проходит звонок</strong><small>3 простых шага</small></span>
               </button>
             </div>
 
-            <div class="after-action reveal reveal--5">
-              <span class="after-action__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <rect x="4" y="5" width="16" height="15" rx="3" />
-                  <path d="M8 3v4m8-4v4M4 10h16" />
-                </svg>
-              </span>
-              <span>После оплаты выберете удобное время. Я позвоню вам лично.</span>
+            <div class="risk-reversal reveal reveal--5">
+              <span aria-hidden="true">✓</span> Разовая оплата
+              <span aria-hidden="true">✓</span> Без подписки
+              <span aria-hidden="true">✓</span> Выбор удобного времени
             </div>
           </div>
 
           <div class="hero__visual reveal reveal--visual">
-            <div class="portrait-card">
+            <div class="visual-glow" aria-hidden="true"></div>
+            <div class="expert-card">
               <img
-                class="portrait-card__image"
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=88"
-                alt="Портрет эксперта — временная фотография для демонстрации концепции"
+                class="expert-card__photo"
+                src="/images/elvira-consultation.webp"
+                alt="Эльвира проводит личную консультацию"
               />
-              <div class="portrait-card__shade" aria-hidden="true"></div>
-              <div class="portrait-card__caption">
-                <span>Имя Фамилия</span>
+              <div class="expert-card__overlay" aria-hidden="true"></div>
+              <div class="expert-card__identity">
+                <span>Эльвира</span>
                 <small>Профессиональный астролог</small>
               </div>
-              <div class="portrait-card__stamp" aria-hidden="true">
-                <span>Личный</span>
-                <span>звонок</span>
+              <div class="expert-card__topic">Отношения · деньги · выбор</div>
+            </div>
+
+            <div class="floating-card floating-card--education">
+              <img src="/images/elvira-certificate.webp" alt="Эльвира получает международный сертификат" />
+              <div>
+                <span class="floating-card__check" aria-hidden="true">✓</span>
+                <small>Подтверждение опыта</small>
+                <strong>Международное<br />образование</strong>
               </div>
             </div>
 
-            <blockquote class="quote-card">
-              <svg viewBox="0 0 32 24" aria-hidden="true">
-                <path d="M0 24V13.4C0 4.9 4.1.7 12.4.7v5.1c-3.5 0-5.4 1.8-5.6 5.4H13V24H0Zm19 0V13.4C19 4.9 23.1.7 31.4.7v5.1c-3.5 0-5.4 1.8-5.6 5.4H32V24H19Z" />
-              </svg>
-              <p>
-                Ваша ситуация уникальна. Поэтому я начинаю не с прогноза,
-                а с вопроса: что для вас сейчас действительно важно?
-              </p>
-            </blockquote>
+            <div class="floating-card floating-card--personal">
+              <img src="/images/elvira-portrait.webp" alt="Портрет Эльвиры" />
+              <div>
+                <span class="floating-card__live"><i></i> Личный формат</span>
+                <strong>Звонок проводит<br />Эльвира лично</strong>
+                <small>Не менеджер и не помощник</small>
+              </div>
+            </div>
+
+            <div class="visual-note">
+              <span aria-hidden="true">✦</span>
+              Конфиденциально<br />и без осуждения
+            </div>
           </div>
 
-          <div class="trust-row reveal reveal--6" aria-label="Причины доверия">
-            <div class="trust-row__intro">
-              <span>Основано на</span>
-              <strong>опыте и образовании</strong>
+          <div class="trust-strip reveal reveal--6" aria-label="Причины доверия">
+            <div class="trust-strip__label">
+              <span>Почему мне доверяют</span>
+              <strong>Опыт, который<br />можно проверить</strong>
             </div>
-            <div class="trust-item">
-              <span class="trust-item__number">01</span>
-              <span>Многолетняя<br />частная практика</span>
+            <div class="trust-fact">
+              <span class="trust-fact__icon" aria-hidden="true">✦</span>
+              <div><strong>Многолетняя практика</strong><small>Работа с реальными жизненными запросами</small></div>
             </div>
-            <div class="trust-item">
-              <span class="trust-item__number">02</span>
-              <span>Международное<br />образование</span>
+            <div class="trust-fact">
+              <span class="trust-fact__icon" aria-hidden="true">◈</span>
+              <div><strong>Международное обучение</strong><small>Профессиональная подготовка и метод</small></div>
             </div>
-            <div class="trust-item">
-              <span class="trust-item__number">03</span>
-              <span>Клиенты и ученики<br />по всему миру</span>
+            <div class="trust-fact">
+              <span class="trust-fact__icon" aria-hidden="true">◎</span>
+              <div><strong>Клиенты по всему миру</strong><small>Личные консультации в онлайн-формате</small></div>
             </div>
           </div>
         </section>
@@ -147,35 +178,33 @@
     </div>
 
     <button class="manager-button" type="button" data-manager>
-      <span class="manager-button__status" aria-hidden="true"></span>
-      <span>
-        <small>Есть вопрос?</small>
-        Написать менеджеру
+      <span class="manager-button__avatar">
+        <img src="/images/elvira-portrait.webp" alt="" />
+        <i aria-hidden="true"></i>
       </span>
+      <span><small>Остался вопрос?</small><strong>Помощь с записью</strong></span>
+      <span aria-hidden="true">→</span>
     </button>
 
     <button class="mobile-cta" type="button" data-open-modal>
-      <span>Личный разбор</span>
-      <strong>99 ₽</strong>
-      <span aria-hidden="true">→</span>
+      <span><small>Личный разбор с Эльвирой</small><strong>Забронировать звонок</strong></span>
+      <b>99 ₽</b>
+      <i aria-hidden="true">→</i>
     </button>
 
     <div class="modal" aria-hidden="true" data-modal>
       <div class="modal__backdrop" data-close-modal></div>
-      <div
-        class="modal__dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modal-title"
-      >
-        <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>
-          <span aria-hidden="true">×</span>
-        </button>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>×</button>
 
-        <div class="modal__eyebrow">Первый личный разбор · 99 ₽</div>
-        <h2 id="modal-title">Расскажите, как с вами связаться</h2>
+        <div class="modal__topline">
+          <img src="/images/elvira-portrait.webp" alt="Эльвира" />
+          <span><small>Личный звонок</small><strong>с Эльвирой</strong></span>
+          <b>99 ₽</b>
+        </div>
+        <h2 id="modal-title">Сделайте первый шаг к ясности</h2>
         <p class="modal__lead">
-          После оплаты вы выберете удобное время звонка. Эксперт свяжется с вами лично.
+          Оставьте контакт — после оплаты вы выберете удобное время звонка.
         </p>
 
         <form class="consultation-form" data-consultation-form>
@@ -185,40 +214,31 @@
           </label>
           <label>
             <span>Телефон или Telegram</span>
-            <input
-              name="contact"
-              type="text"
-              autocomplete="tel"
-              placeholder="+7 999 000-00-00"
-              required
-            />
+            <input name="contact" type="text" autocomplete="tel" placeholder="+7 999 000-00-00" required />
           </label>
           <label>
-            <span>Что вас сейчас беспокоит?</span>
+            <span>С чем хотите разобраться?</span>
             <select name="topic" required>
-              <option value="" selected disabled>Выберите тему</option>
+              <option value="" selected disabled>Выберите главный вопрос</option>
               <option>Отношения и семья</option>
               <option>Деньги и работа</option>
               <option>Предназначение</option>
               <option>Сложный выбор</option>
+              <option>Тревога за будущее</option>
               <option>Другая ситуация</option>
             </select>
           </label>
           <button class="form-submit" type="submit">
-            Продолжить за 99 ₽
-            <span aria-hidden="true">→</span>
+            <span><small>Разовая оплата</small><strong>Продолжить и оплатить 99 ₽</strong></span>
+            <i aria-hidden="true">→</i>
           </button>
-          <small class="form-note">
-            Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.
-          </small>
+          <small class="form-note">Без подписки. Ваши данные используются только для связи по заявке.</small>
         </form>
 
         <div class="form-success" data-form-success hidden>
           <span class="form-success__icon" aria-hidden="true">✓</span>
           <h3>Сценарий заявки готов</h3>
-          <p>
-            В рабочей версии здесь будет переход к оплате и выбор удобного времени звонка.
-          </p>
+          <p>В рабочей версии здесь будет переход к оплате и выбор времени звонка.</p>
           <button type="button" data-close-modal>Понятно</button>
         </div>
       </div>
@@ -227,34 +247,23 @@
     <div class="process-modal" aria-hidden="true" data-process-modal>
       <div class="modal__backdrop" data-close-process></div>
       <div class="process-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="process-title">
-        <button class="modal__close" type="button" aria-label="Закрыть" data-close-process>
-          <span aria-hidden="true">×</span>
-        </button>
-        <div class="modal__eyebrow">Спокойно и конфиденциально</div>
-        <h2 id="process-title">Как проходит первый звонок</h2>
+        <button class="modal__close" type="button" aria-label="Закрыть" data-close-process>×</button>
+        <div class="process-modal__badge">Спокойно · лично · конфиденциально</div>
+        <h2 id="process-title">От заявки до ясного направления — три шага</h2>
         <ol class="process-list">
-          <li>
-            <span>01</span>
-            <div><strong>Оставляете заявку</strong><p>Оплачиваете 99 ₽ и выбираете удобное время.</p></div>
-          </li>
-          <li>
-            <span>02</span>
-            <div><strong>Формулируем запрос</strong><p>Вы коротко рассказываете о ситуации, которая вас беспокоит.</p></div>
-          </li>
-          <li>
-            <span>03</span>
-            <div><strong>Получаете направление</strong><p>Эксперт обозначает ключевые точки и возможный следующий шаг.</p></div>
-          </li>
+          <li><span>01</span><div><strong>Оставляете заявку</strong><p>Оплачиваете 99 ₽ и выбираете удобное время для разговора.</p></div></li>
+          <li><span>02</span><div><strong>Рассказываете о главном</strong><p>Эльвира задаёт вопросы и помогает точно сформулировать ваш запрос.</p></div></li>
+          <li><span>03</span><div><strong>Получаете направление</strong><p>Вы понимаете ключевые точки ситуации и ближайший следующий шаг.</p></div></li>
         </ol>
         <button class="form-submit" type="button" data-process-to-form>
-          Записаться на разбор за 99 ₽
-          <span aria-hidden="true">→</span>
+          <span><small>Первый личный звонок</small><strong>Записаться за 99 ₽</strong></span>
+          <i aria-hidden="true">→</i>
         </button>
       </div>
     </div>
 
     <div class="toast" role="status" aria-live="polite" data-toast>
-      На готовом сайте здесь откроется чат с менеджером
+      На готовом сайте здесь откроется чат с помощником
     </div>
 
     <script type="module" src="script.js"></script>
