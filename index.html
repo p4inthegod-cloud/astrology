@@ -20,6 +20,10 @@
   <body>
     <header class="topbar">
       <div class="container topbar__inner">
+        <a class="topbar__brand" href="#top" aria-label="Эльвира — на главную">
+          <strong>Эльвира</strong>
+          <span>профессиональный астролог</span>
+        </a>
         <nav class="topbar__nav" aria-label="Навигация по странице">
           <a href="#expert">Об эксперте</a>
           <a href="#help">С чем помогаю</a>
@@ -28,7 +32,7 @@
           <a href="#faq">Вопросы</a>
         </nav>
         <button class="topbar__cta" type="button" data-open-modal>
-          Записаться
+          Получить разбор
         </button>
       </div>
     </header>
@@ -39,13 +43,13 @@
           <div class="hero__content">
             <div class="section-label reveal reveal--1">Профессиональная астрология · без общих прогнозов</div>
             <h1 class="hero__title reveal reveal--2" id="hero-title">
-              Персональный разбор<br />вашей ситуации
-              <span>Поймите, что происходит<br />и как действовать дальше</span>
+              Не знаете, как поступить<br />в сложной ситуации?
+              <span>Получите персональный разбор<br />и понятный следующий шаг</span>
             </h1>
             <p class="hero__lead reveal reveal--3">
-              Эльвира с помощью профессиональной астрологии разберёт один конкретный вопрос —
-              <strong>об отношениях, семье, деньгах или важном выборе</strong> —
-              и даст понятное направление действий.
+              Во время личного телефонного разговора Эльвира разберёт один вопрос
+              <strong>об отношениях, семье, деньгах или важном выборе</strong> — и поможет
+              увидеть причины, возможные варианты и следующий шаг.
             </p>
 
             <div class="hero-offer reveal reveal--4">
@@ -58,10 +62,10 @@
                 <span>Причины, возможности и понятный следующий шаг</span>
               </div>
               <button type="button" data-open-modal>
-                Записаться
+                Получить личный разбор за 99 ₽
                 <i aria-hidden="true">→</i>
               </button>
-              <p>Разовая оплата · без подписки · удобное время после оплаты</p>
+              <p>Оплата 99 ₽ → выбираете удобное время → Эльвира звонит лично</p>
             </div>
           </div>
 
@@ -356,16 +360,22 @@
     </footer>
 
     <button class="mobile-cta" type="button" data-open-modal>
-      <span>Записаться на разбор</span><i aria-hidden="true">→</i>
+      <span>Получить личный разбор за 99 ₽</span><i aria-hidden="true">→</i>
     </button>
 
     <div class="modal" aria-hidden="true" data-modal>
       <div class="modal__backdrop" data-close-modal></div>
       <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>×</button>
-        <p class="section-kicker">Персональный разбор · 99 ₽</p>
-        <h2 id="modal-title">Оставьте контакт и выберите главный вопрос</h2>
-        <p class="modal__lead">После формы откроется оплата, затем выбор удобного времени звонка.</p>
+        <p class="section-kicker">Личный телефонный разбор · 99 ₽</p>
+        <h2 id="modal-title">Получить личный разбор за 99 ₽</h2>
+        <p class="modal__lead">Оставьте контакт и выберите тему разговора. Дальше всё проходит по понятному сценарию:</p>
+        <ol class="modal-path" aria-label="Как проходит запись">
+          <li><span>1</span>Оставляете контакт</li>
+          <li><span>2</span>Оплачиваете 99 ₽</li>
+          <li><span>3</span>Выбираете время</li>
+          <li><span>4</span>Эльвира звонит лично</li>
+        </ol>
         <form class="consultation-form" data-consultation-form>
           <label><span>Ваше имя</span><input name="name" type="text" autocomplete="name" placeholder="Например, Анна" required /></label>
           <label><span>Телефон или Telegram</span><input name="contact" type="text" autocomplete="tel" placeholder="+7 999 000-00-00" required /></label>
@@ -377,12 +387,12 @@
               <option>Сложный выбор</option><option>Тревога за будущее</option><option>Другая ситуация</option>
             </select>
           </label>
-          <button class="form-submit" type="submit"><span>Продолжить</span><strong>99 ₽ →</strong></button>
+          <button class="form-submit" type="submit"><span>Перейти к оплате</span><strong>99 ₽ →</strong></button>
           <small class="form-note">Разовая оплата. Без подписки и скрытых списаний.</small>
         </form>
         <div class="form-success" data-form-success hidden>
-          <span>✓</span><h3>Сценарий заявки готов</h3>
-          <p>В рабочей версии здесь откроется оплата, а после неё — календарь доступного времени.</p>
+          <span>✓</span><h3>Следующий шаг — оплата 99 ₽</h3>
+          <p>После оплаты вы выберете удобное время. Эльвира позвонит лично в выбранный вами час.</p>
           <button type="button" data-close-modal>Понятно</button>
         </div>
       </div>

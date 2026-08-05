@@ -116,11 +116,30 @@ a {
 }
 
 .topbar__inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
   align-items: center;
-  justify-content: center;
-  gap: 14px;
+  gap: 20px;
   min-height: 72px;
+}
+
+.topbar__brand {
+  display: grid;
+  gap: 1px;
+  justify-self: start;
+  color: white;
+  text-decoration: none;
+}
+
+.topbar__brand strong {
+  font-size: 19px;
+  letter-spacing: -0.025em;
+}
+
+.topbar__brand span {
+  color: #bcaebe;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .topbar__nav {
@@ -138,7 +157,7 @@ a {
   color: #c9becd;
   padding: 9px 13px;
   border-radius: 9px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   text-decoration: none;
   transition: 160ms ease;
@@ -152,6 +171,7 @@ a {
 .topbar__cta {
   display: flex;
   align-items: center;
+  justify-self: end;
   gap: 15px;
   min-height: 48px;
   padding: 0 24px;
@@ -160,7 +180,7 @@ a {
   background: linear-gradient(110deg, var(--coral), var(--rose));
   box-shadow: 0 12px 34px rgba(255, 120, 101, 0.22);
   cursor: pointer;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 800;
   transition: 180ms ease;
 }
@@ -200,7 +220,7 @@ a {
   border-radius: 8px;
   background: rgba(255, 179, 111, 0.055);
   color: #f0d8c4;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -231,7 +251,7 @@ a {
   max-width: 760px;
   margin: 25px 0 0;
   color: #d0c4d2;
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.7;
 }
 
@@ -241,7 +261,7 @@ a {
 
 .hero-offer {
   display: grid;
-  grid-template-columns: 170px minmax(210px, 1fr) 165px;
+  grid-template-columns: 160px minmax(180px, 1fr) 280px;
   align-items: center;
   gap: 20px;
   max-width: 780px;
@@ -260,7 +280,7 @@ a {
 
 .hero-offer__price span {
   color: #d9cbdc;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -282,12 +302,12 @@ a {
 }
 
 .hero-offer__value strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .hero-offer__value span {
   color: #c9becd;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -302,7 +322,7 @@ a {
   background: linear-gradient(105deg, #ff715d, #dc6fa8);
   box-shadow: 0 15px 40px rgba(255, 120, 101, 0.27);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   transition: 180ms ease;
 }
@@ -318,7 +338,7 @@ a {
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   color: #bfb2c2;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   text-align: center;
 }
@@ -374,7 +394,7 @@ a {
 
 .hero-photo figcaption span {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -382,7 +402,7 @@ a {
   max-width: 470px;
   margin: 5px 0 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.55;
 }
 
@@ -955,7 +975,7 @@ a {
 
 .page-form label > span,
 .consultation-form label > span {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -1001,7 +1021,7 @@ a {
   background: linear-gradient(110deg, var(--coral), var(--rose));
   box-shadow: 0 14px 36px rgba(255, 120, 101, 0.22);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 800;
   transition: 180ms ease;
 }
@@ -1014,7 +1034,7 @@ a {
 .page-form > small,
 .form-note {
   color: var(--muted-2);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -1051,7 +1071,7 @@ a {
 .form-success p {
   margin: 12px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -1104,7 +1124,7 @@ a {
 .modal__dialog {
   position: relative;
   z-index: 1;
-  width: min(100%, 550px);
+  width: min(100%, 620px);
   max-height: calc(100svh - 44px);
   overflow: auto;
   padding: 38px;
@@ -1146,8 +1166,44 @@ a {
 .modal__lead {
   margin: 13px 0 24px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.6;
+}
+
+.modal-path {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.modal-path li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #e7dde9;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.modal-path li span {
+  display: grid;
+  flex: 0 0 auto;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 7px;
+  background: rgba(255, 151, 126, 0.13);
+  color: var(--peach);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .form-success {
@@ -1338,8 +1394,17 @@ a {
   }
 
   .topbar__inner {
-    justify-content: center;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
     min-height: 72px;
+  }
+
+  .topbar__brand strong {
+    font-size: 17px;
+  }
+
+  .topbar__brand span {
+    font-size: 12px;
   }
 
   .topbar__nav {
@@ -1349,11 +1414,7 @@ a {
   .topbar__cta {
     min-height: 50px;
     padding: 0 17px;
-    font-size: 14px;
-  }
-
-  .topbar__cta strong {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .hero {
@@ -1366,7 +1427,7 @@ a {
 
   .section-label {
     margin-bottom: 22px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.4;
   }
 
@@ -1384,7 +1445,7 @@ a {
 
   .hero__lead {
     margin-top: 24px;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.65;
   }
 
@@ -1419,7 +1480,7 @@ a {
 
   .hero-offer > p {
     grid-column: auto;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
   }
 
@@ -1434,7 +1495,7 @@ a {
   }
 
   .hero-photo figcaption p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .trust-numbers__head {
@@ -1581,6 +1642,14 @@ a {
 
   .modal__dialog h2 {
     font-size: 29px;
+  }
+
+  .modal__dialog .section-kicker {
+    font-size: 14px;
+  }
+
+  .modal-path {
+    grid-template-columns: 1fr;
   }
 }
 
