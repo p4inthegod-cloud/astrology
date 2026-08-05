@@ -357,7 +357,7 @@ a {
   left: 28px;
   z-index: 2;
   display: grid;
-  gap: 5px;
+  gap: 6px;
 }
 
 .hero-photo figcaption strong {
@@ -368,7 +368,15 @@ a {
 .hero-photo figcaption span {
   color: rgba(255, 255, 255, 0.78);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.hero-photo figcaption p {
+  max-width: 470px;
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .trust-numbers {
@@ -1416,6 +1424,10 @@ a {
 
   .hero-photo figcaption strong {
     font-size: 26px;
+  }
+
+  .hero-photo figcaption p {
+    font-size: 14px;
   }
 
   .trust-numbers__head {
