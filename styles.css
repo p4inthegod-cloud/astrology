@@ -209,7 +209,7 @@ a {
 .hero__title {
   max-width: 850px;
   margin: 0;
-  font-size: clamp(56px, 5.5vw, 88px);
+  font-size: clamp(54px, 5vw, 78px);
   font-weight: 800;
   letter-spacing: -0.055em;
   line-height: 1.01;
@@ -346,7 +346,13 @@ a {
 .hero-photo::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(14, 9, 17, 0.86));
+  background: linear-gradient(
+    180deg,
+    transparent 44%,
+    rgba(14, 9, 17, 0.12) 56%,
+    rgba(14, 9, 17, 0.5) 74%,
+    rgba(14, 9, 17, 0.9) 100%
+  );
   content: "";
 }
 
@@ -358,6 +364,7 @@ a {
   z-index: 2;
   display: grid;
   gap: 6px;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.46);
 }
 
 .hero-photo figcaption strong {
